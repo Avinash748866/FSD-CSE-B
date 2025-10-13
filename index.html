@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Card</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 160px;
+      text-align: center;
+      margin: 20px auto;
+    }
+  </style>
 </head>
 <body>
-    <div class="">main</div>
+  <div>main</div>
+  <div id="root"></div>
+
+  <!-- React and ReactDOM CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Your React code -->
+  <script>
+    const image = React.createElement("img", {
+      src: "",
+      width: "150",
+      height: "150",
+      alt: "book image"
+    });
+
+    const h4 = React.createElement("h4", null, "price:345");
+
+    const child = React.createElement("div", { className: "card" }, image, h4);
+
+    const parent = document.getElementById("root");
+    ReactDOM.render(child, parent);
+  </script>
 </body>
 </html>

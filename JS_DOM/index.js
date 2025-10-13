@@ -1,0 +1,13 @@
+const image=document.createElement("img");
+image.src="https://t3.ftcdn.net/jpg/12/68/48/84/360_F_1268488418_NSkhlEjsvzf2u4EdrS3K5FCQvaL6QTcQ.jpg";
+image.width="150";
+image.height="150";
+image.alt="book image";
+const h4=document.createElement("h4");
+h4.innerText="325";
+const child =document.createElement("div");
+child.className="card";
+child.appendChild(image);
+child.appendChild(h4);
+const parent=document.getElementById("root");
+parent.appendChild(child);  
